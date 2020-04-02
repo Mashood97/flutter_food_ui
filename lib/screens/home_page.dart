@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../widgets/food_item_grid.dart';
 
 class HomePage extends StatelessWidget {

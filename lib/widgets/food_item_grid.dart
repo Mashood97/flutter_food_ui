@@ -9,7 +9,7 @@ class FoodItemGrid extends StatelessWidget {
       'title': 'Burgers'
     },
     {
-      'image': 'https://images.pexels.com/photos/1907244/pexels-photo-1907244.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      'image': 'https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       'title': 'Desi Cusine'
     },
     {

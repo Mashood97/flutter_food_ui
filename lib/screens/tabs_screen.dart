@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../screens/home_page.dart';
 import '../screens/user_profile.dart';
 import '../widgets/badge.dart';
-
+import '../widgets/main_drawer.dart';
 class TabsScreen extends StatefulWidget {
   static const routeArgs = '/tabs-screen';
 
@@ -63,29 +63,36 @@ class _TabsScreenState extends State<TabsScreen> {
         backgroundColor: Colors.white,
       ),
       drawerScrimColor: Colors.red.withOpacity(0.8),
-      drawer: Drawer(),
+      drawer: MainDrawer(),
       body: _pages[_selectedIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        backgroundColor: Colors.redAccent,
         unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.red,
+        selectedItemColor: Colors.white,
         elevation: 2,
         onTap: _selectedPage,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.restaurant_menu,
             ),
             title: Text(
               'Menu',
+              style: TextStyle(
+                fontFamily: 'SpicyRice'
+              ),
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.supervised_user_circle,
+              Icons.person_pin_circle,
             ),
             title: Text(
               'Profile',
+              style: TextStyle(
+                  fontFamily: 'SpicyRice'
+              ),
             ),
           )
         ],
