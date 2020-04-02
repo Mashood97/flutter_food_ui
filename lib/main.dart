@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import './screens/home_page.dart';
+
 import './screens/tabs_screen.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -44,31 +45,34 @@ class FoodApp extends StatelessWidget {
 //
 
                   SignInButton(
-                    Buttons.Google,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).pushReplacementNamed(TabsScreen.routeArgs);
-                    },
-                  ),
-
-                  SignInButton(
                     Buttons.Email,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed(TabsScreen.routeArgs);
+                      Navigator.of(context)
+                          .pushReplacementNamed(TabsScreen.routeArgs);
                     },
                   ),
+                  SignInButton(
+                    Buttons.Google,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(TabsScreen.routeArgs);
+                    },
+                  ),
+
                   SignInButton(
                     Buttons.Facebook,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed(TabsScreen.routeArgs);
+                      Navigator.of(context)
+                          .pushReplacementNamed(TabsScreen.routeArgs);
                     },
                   ),
                 ],
