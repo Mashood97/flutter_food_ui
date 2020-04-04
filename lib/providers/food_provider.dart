@@ -103,4 +103,10 @@ class FoodProvider with ChangeNotifier {
       return prod.isFav;
     }).toList();
   }
+
+  FoodModel getProductById(String prodId) {
+    return _items.firstWhere((prod) {
+      return prod.id == prodId;
+    });
+  }
 }

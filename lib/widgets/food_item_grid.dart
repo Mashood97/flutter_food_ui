@@ -29,8 +29,9 @@ class FoodItemGrid extends StatelessWidget {
       itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
         value: productData[i],
         child: FoodItem(
-          foodData.items[i].imageUrl,
-          foodData.items[i].title,
+//          productData[i].id,
+//          productData[i].imageUrl,
+//          productData[i].title,
         ),
       ),
     );

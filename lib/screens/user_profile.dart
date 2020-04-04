@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../widgets/badge.dart';
+import '../widgets/main_drawer.dart';
 class UserProfile extends StatefulWidget {
   @override
   _UserProfileState createState() => _UserProfileState();
@@ -9,9 +10,41 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:  AppBar(
+      automaticallyImplyLeading: true,
+      iconTheme: new IconThemeData(color: Colors.black),
+      title: Text(
+        'User Profile',
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 24,
+        ),
+      ),
+      actions: <Widget>[
+         Badge(
+          child: Icon(
+            Icons.shopping_basket,
+          ),
+          value: "0",
+          color: Colors.red,
+        ),
+
+          IconButton(
+            icon: Icon(
+              Icons.more_vert,
+              size: 30,
+            ),
+            onPressed: () {},
+          ),
+      ],
+    ),
+      drawerScrimColor: Colors.red.withOpacity(0.8),
+
+      drawer: MainDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Center(
               child: CircleAvatar(

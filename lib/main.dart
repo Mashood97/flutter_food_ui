@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:flutterfooduipractice/providers/cart_provider.dart';
+import 'package:flutterfooduipractice/screens/food_detail_screen.dart';
 import './providers/food_provider.dart';
 import 'package:provider/provider.dart';
 import './screens/tabs_screen.dart';
@@ -11,7 +13,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -22,14 +23,21 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(
           value: FoodModel(),
         ),
+        ChangeNotifierProvider.value(
+          value: CartProvider(),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Food App',
+        theme: ThemeData(
+          primaryColor: Colors.white,
+        ),
         initialRoute: '/',
         routes: {
           '/': (ctx) => FoodApp(),
           TabsScreen.routeArgs: (ctx) => TabsScreen(),
+          FoodDetailScreen.routeArgs: (ctx) => FoodDetailScreen(),
         },
       ),
     );
