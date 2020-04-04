@@ -1,4 +1,4 @@
-# flutter food UI
+# Flutter food UI
 
 Flutter User interface of food app.
 
