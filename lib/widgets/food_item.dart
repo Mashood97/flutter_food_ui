@@ -54,7 +54,7 @@ class FoodItem extends StatelessWidget {
               Scaffold.of(context).showSnackBar(
                 SnackBar(
                   duration: Duration(
-                    seconds: 2,
+                    seconds: 1,
                   ),
                   backgroundColor: Colors.black87,
                   content: Text('Item Added',style: TextStyle(

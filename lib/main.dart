@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutterfooduipractice/providers/cart_provider.dart';
 import 'package:flutterfooduipractice/screens/food_detail_screen.dart';
+import 'package:flutterfooduipractice/screens/order_cart_screen.dart';
 import './providers/food_provider.dart';
 import 'package:provider/provider.dart';
 import './screens/tabs_screen.dart';
@@ -31,13 +32,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Food App',
         theme: ThemeData(
+          canvasColor: Colors.white,
           primaryColor: Colors.white,
+          accentColor: Colors.red.withOpacity(0.5),
         ),
         initialRoute: '/',
         routes: {
           '/': (ctx) => FoodApp(),
           TabsScreen.routeArgs: (ctx) => TabsScreen(),
           FoodDetailScreen.routeArgs: (ctx) => FoodDetailScreen(),
+          CartScreen.routeArgs: (ctx) => CartScreen(),
         },
       ),
     );

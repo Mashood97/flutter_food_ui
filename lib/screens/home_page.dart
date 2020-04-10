@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfooduipractice/providers/cart_provider.dart';
+import 'package:flutterfooduipractice/screens/order_cart_screen.dart';
 import 'package:provider/provider.dart';
 import '../widgets/food_item_grid.dart';
 import '../widgets/badge.dart';
@@ -146,8 +147,15 @@ class _HomePageState extends State<HomePage> {
               value: cart.itemCount.toString(),
               color: Colors.red,
             ),
-            child: Icon(
-              Icons.shopping_basket,
+            child: IconButton(
+              icon: Icon(
+                Icons.shopping_basket,
+                color: Theme.of(context).accentColor,
+              ),
+              splashColor: Theme.of(context).accentColor,
+              onPressed: () {
+                Navigator.of(context).pushNamed(CartScreen.routeArgs);
+              },
             ),
           ),
           PopupMenuButton(
